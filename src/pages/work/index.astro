@@ -1,0 +1,14 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import HelloThereSVG from "@/components/svg/helloThere";
+import ProjectGrid from "@/components/ProjectGrid";
+import { projects } from "@/data/projects";
+---
+
+<Layout title="Ahmed Ben Khalifa - Designer" description="Ahmed Ben Khalifa - Designer">
+  
+  <main class="min-h-screen container max-w-5xl mx-auto mt-8">
+    <ProjectGrid projects={projects} />
+  </main>
+  
+</Layout>
