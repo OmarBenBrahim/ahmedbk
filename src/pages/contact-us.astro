@@ -1,0 +1,41 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import ProjectGrid from "@/components/ProjectGrid";
+import { projects } from "@/data/projects";
+import { ArrowUpRight } from "lucide-react";
+import ContactForm from "@/components/ContactForm";
+---
+
+<Layout title="Ahmed Ben Khalifa - Designer" description="Ahmed Ben Khalifa - Designer">
+  
+  <main class="min-h-screen container max-w-5xl mx-auto md:mt-12">
+    <div class="px-6 md:px-0 justify-center border-b border-chart-2 p-4">
+        <h1 class="max-w-3xl text-4xl md:text-6xl uppercase font-light text-center text-foreground mt-12 mx-auto">
+        Let’s work together
+        </h1>
+        <div class="max-w-3xl text-center text-2xl mt-12 font-light mx-auto">
+            Get in touch to discuss how we can transform your ideas into unique visual realities, leveraging my commitment to excellence and innovation to bring your vision to life.
+        </div>
+    </div>
+
+    <!-- Form Section -->
+    <div class="flex flex-col md:flex-row mt-12 gap-6 px-4">
+        <div class="flex-1 border-red-400">
+            <h3 class="text-2xl font-bold uppercase pb-2">contact</h3>
+            <p class="text-base font-light">We will respond to your quote request within 48 business hours. If your request is urgent, feel free to contact us directly at ahmed.bk.m2m@gmail.com </p>
+        </div>
+        <div class="flex-1">
+        <ContactForm  client:load/>
+    </div>
+    </div>
+    <!-- Contact Form -->
+    <div class="mt-8  px-6 md:px-0">
+      <a  href="/work" class="flex justify-between border-b border-chart-2 py-3 text-xl uppercase">
+        <span>Latest Works</span> <ArrowUpRight size={36} strokeWidth={1} className="ms-2" />
+      </a>
+      <ProjectGrid projects={projects.slice(0 , 6)} />
+    </div>
+    
+  </main>
+  
+</Layout>

@@ -13,10 +13,13 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "start": "serve dist/",
+    "format": "prettier --write 'src/**/*.{js,jsx,astro}'"
   },
   "dependencies": {
     "@astrojs/react": "^4.2.1",
+    "@formspree/react": "^3.0.0",
     "@radix-ui/react-slot": "^1.1.2",
     "@tailwindcss/vite": "^4.0.14",
     "@types/react": "^19.0.12",
@@ -30,6 +33,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "repomix": "^1.1.0",
+    "serve": "^14.2.4",
     "tailwind-merge": "^3.0.2",
     "tailwindcss": "^4.0.14",
     "tw-animate-css": "^1.2.4"
